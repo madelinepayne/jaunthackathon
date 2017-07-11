@@ -4,43 +4,55 @@
 <head>
     <title>Jaunt Hub</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link href="homepage.css" rel="stylesheet" type="text/css" />
+    <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css" /> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="homepage.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="homepage.html">JAUNT</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <!--         <li class="active"><a href="#">Home</a></li> -->
+                <li><a href="sanmateo.html">San Mateo</a></li>
+                <li><a href="santamonica.html">Santa Monica</a></li>
+                <li><a href="newyork.html">New York</a></li>
+                <li><a href="london.html">London</a></li>
+                <li><a href="shanghai.html">Shanghai</a></li>
+            </ul>
+        </div>
+    </nav>
     <div class="header">
         <h1 align="center">JAUNT HUB</h1>
     </div>
     <div class="wrapper">
-
         <!-- San Mateo Button -->
         <div class="container" data-href="sanmateo.html">
             <img src="sanmateo.jpg" alt="San Mateo" class="image" style="width=20%" />
             <p class="title">San Mateo</p>
             <div class="overlay"></div>
         </div>
-
         <!-- Santa Monica Button -->
         <div class="container" data-href="santamonica.html">
             <img src="santamonica.jpg" alt="Santa Monica" class="image" style="width=20%" />
             <p class="title">Santa Monica</p>
             <div class="overlay"></div>
         </div>
-
         <!-- New York Button -->
         <div class="container" data-href="newyork.html">
             <img src="newyork.jpg" alt="New York" class="image" style="width=20%" />
             <p class="title">New York</p>
             <div class="overlay"></div>
         </div>
-
         <!-- London Button -->
         <div class="container" data-href="london.html">
             <img src="london.jpeg" alt="London" class="image" style="width=20%" />
             <p class="title">London</p>
             <div class="overlay"></div>
         </div>
-
         <!-- Shanghai Button -->
         <div class="container" data-href=".html">
             <img src="shanghai.jpg" alt="San Mateo" class="image" style="width=20%" />
@@ -48,6 +60,14 @@
             <div class="overlay"></div>
         </div>
     </div>
+    <!-- <ul class="nav navbar-default">
+        <li><a href=".html">Home</a></li>
+        <li><a href=".html">Home</a></li>
+        <li><a href=".html">Home</a></li>
+        <li><a href=".html">Home</a></li>
+        <li><a href=".html">Home</a></li>
+
+    </ul> -->
     <script language="JavaScript" type="text/javascript" src="homepage.js"></script>
 </body>
 
