@@ -1,13 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300');
+
 body {
     font-family: Lato, sans-serif;
-    font-weight: 300;
-    font-size: 36px;
+    /*font-weight: 300;*/
+    /*font-size: 36px;*/
     letter-spacing: .025em;
     background-color: #141414;
     color: white;
     letter-spacing: 10px;
 }
+.header {
+	font-family: Lato, sans-serif;
+	font-size: 40px;
+	letter-spacing: 15px;
+	font-weight: 300;
 
+}
 .wrapper {
     position: absolute;
     clear: both;
@@ -98,22 +106,21 @@ img {
     color: white;
     border: solid 2px white;
     z-index: 1;
-}
-*/
+}*/
 
-a.location-button {
-    display: block; /* display like div */
+
+/*a.location-button {
+    display: block; 
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
     right:0;
-    /*top: 100px;*/
     text-align: center;
     opacity: 0;
     transition: opacity .35s ease;
 }
-
+*/
 .container:hover .button {
     opacity: 1;
 }
