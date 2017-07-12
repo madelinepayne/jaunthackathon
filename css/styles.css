@@ -32,7 +32,7 @@ a:active {
     height: 15% auto;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-    background-color: #111111
+    background-color: #212121
 }
 
 #header a {
@@ -64,7 +64,7 @@ a:active {
 }
 
 #content {
-    width: 60%;
+    width: 90%;
     margin: auto;
     padding-top: 2.5em;
 }
@@ -72,7 +72,7 @@ a:active {
 #content-left {
     float: left;
     margin: auto;
-    width: 48%;
+    width: 30%;
 }
 
 #quick-links {
@@ -84,7 +84,7 @@ a:active {
 #content-right {
     float: right;
     margin: auto;
-    width: 48%;
+    width: 65%;
 }
 
 #transport-links {
