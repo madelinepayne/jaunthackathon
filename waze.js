@@ -10,11 +10,6 @@ var officeCoords = {
 
 function initMap() {
     getMyLocation();
-    run();
-}
-
-function run() {
-    findNearestOffice()
 }
 
 function getMyLocation() {
@@ -45,12 +40,4 @@ function renderMap() {
     trafficLayer.setMap(map);
 }
 
-// function findNearestOffice() {
-//     var shortest_distance = 100000000;
-//     for (var i = 0; i < 5; i++) {
-//         var distance = (google.maps.geometry.spherical.computeDistanceBetween(officeCoords[i], myLocation));
-//         if(distance < shortest_distance) {
-//          shortest_distance = distance;
-//         }
-//     }
-// }
+
