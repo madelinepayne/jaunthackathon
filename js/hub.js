@@ -28,11 +28,17 @@ function setWeather() {
     mylat = GetQueryStringParams("lat");
     mylng = GetQueryStringParams("lng");
     cityName = GetQueryStringParams("name");
-    if (name.search('-') != -1) {
-        name = name.replace('-', ' ');
+    if (cityName.search('-') != -1) {
+        cityName = cityName.replace('-', ' ');
     }
     $('#transport-links').append('<div id = "weather"> <iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=' + mylat + '&lon=' + mylng + '&name=' + cityName + '"></iframe></div>');
-
+}
+function hideTube()
+{
+    if (GetQueryStringParams("name")!="London")
+    { 
+        $('#tubestatus').hide();
+    }
 }
 
 
@@ -63,3 +69,4 @@ function renderMap() {
     var trafficLayer = new google.maps.TrafficLayer();
     trafficLayer.setMap(map);
 }
+$('window').load(hideTube());
