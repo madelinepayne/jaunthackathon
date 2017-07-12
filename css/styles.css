@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300');
+
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-size: 100%
   line-height:1.7em;
   color: white;
   margin: auto;
-  background-color: black;
+  background-color: white;
 }
 
 a {
@@ -88,3 +90,9 @@ a:active {
   border-spacing: 0.3em;
   margin-top: 1.5em;
 }
+
+#map {
+    height: 800px;
+    width: 100%;
+}
+
