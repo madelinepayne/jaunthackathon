@@ -20,7 +20,7 @@ ul.navbar-nav {
     letter-spacing: 2px;
 }
 
-a {
+a:link {
     color: black;
     text-decoration: none;
 }
@@ -84,7 +84,7 @@ img {
 #content {
     width: 90%;
     margin: auto;
-    padding-top: 2.5em;
+    /*padding-top: 2.5em;*/
 }
 
 #content-left {
@@ -116,15 +116,41 @@ img {
 #news {
   padding-left: 0.4em;
   padding-right: 0.4em;
-  border: 0.25em solid #bed841;
-  border-spacing: 0.3em;
-  margin-top: 1.5em;
-  height: 800px;
+  border-right: groove 1px black;
+  height: 500px;
   overflow-y: scroll;
 }
 
-#news a {
-  color: #0000ee;
+#news::-webkit-scrollbar
+{
+  width: 5px;
+  background-color: #F5F5F5;
+}
+
+#news::-webkit-scrollbar-thumb
+{
+  background-color: #bed841;
+}
+
+
+#sidebar {
+  background-color: white;
+  text-transform: uppercase;
+  width: 200px;
+  float: left;
+  text-align: center;
+}
+
+#sidebar ul li {
+  list-style: none;
+  padding: 16px 16px 16px 0;
+  border-right: groove 1px #bed841;
+  transition: all ease 0.6s;
+}
+
+#sidebar ul li:hover {
+  background: #efefef;
+  transition: all ease 0.6s;
 }
 
 #map {
