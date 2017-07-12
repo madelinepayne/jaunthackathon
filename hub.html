@@ -13,11 +13,11 @@
     <script type="text/javascript" src="js/scripts.js"></script>
 </head>
 
-<body>
+<body onload="initPage()">
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="homepage.html">JAUNT</a>
+                <a class="navbar-brand" href="index.html">JAUNT</a>
             </div>
             <ul class="nav navbar-nav navbar-right">
                 <!--         <li class="active"><a href="#">Home</a></li> -->
@@ -49,11 +49,15 @@
                         </div>
                     </nav>
                 </div>
+                <div id="map"></div>
+                <div id="tubestatus" style="width:260px">
+                    <script language="JavaScript" src="https://www.tfl.gov.uk/tfl/syndication/widgets/serviceboard/embeddable/serviceboard-iframe-stretchy.js"></script>
+                </div>
             </div>
             <div id="content-right">
                 <div id="transport-links">
                     <h2>Weather</h2>
-                    <script type="text/javascript">
+                    <!--                     <script type="text/javascript">
                     function GetQueryStringParams(sParam) {
                         var sPageURL = window.location.search.substring(1);
                         var sURLVariables = sPageURL.split('&');
@@ -72,6 +76,7 @@
                     }
                     $('#transport-links').append('<div id = "weather"> <iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=' + lat + '&lon=' + lng + '&name=' + name + '"></iframe></div>');
                     </script>
+ -->
                     <!-- waze -->
                     <!-- caltrain link + twitter feed news -->
                 </div>
@@ -83,3 +88,7 @@
         </div>
     </div>
 </body>
+<script type="text/javascript" src="hub.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3dlcGcuOHQlw1Ryqk0iQfpdd-3tHOXbM&callback=initMap&libraries=geometry" type="text/javascript"></script>
+
+</html>
