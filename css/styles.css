@@ -6,7 +6,6 @@ body {
     color: black;
     margin: auto;
     background-color: white;
-    background-color: white;
 }
 .navbar {
     font-family: Lato, sans-serif;
@@ -82,15 +81,14 @@ img {
 }
 
 #content {
-    width: 90%;
     margin: auto;
     /*padding-top: 2.5em;*/
 }
 
 #content-left {
     float: left;
-    margin: auto;
-    width: 30%;
+    margin-left: 12px;
+    width: 50%;
 }
 
 #quick-links {
@@ -100,15 +98,15 @@ img {
 }
 
 #content-right {
-    float: right;
-    margin: auto;
-    width: 65%;
+    overflow: hidden;
+    margin-left: 16px;
+    margin-right: 16px;
+
 }
 
 #transport-links {
     padding-left: 0.4em;
     padding-right: 0.4em;
-    border: 0.25em solid #bed841;
     border-spacing: 0.3em;
     margin-bottom: 1.5em;
 }
@@ -139,12 +137,12 @@ img {
   width: 200px;
   float: left;
   text-align: center;
+  border-right: groove 1px black; 
 }
 
 #sidebar ul li {
   list-style: none;
   padding: 16px 16px 16px 0;
-  border-right: groove 1px #bed841;
   transition: all ease 0.6s;
 }
 
@@ -155,5 +153,4 @@ img {
 
 #map {
     height: 400px;
-    width: 40%;
 }
