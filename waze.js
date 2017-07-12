@@ -8,7 +8,6 @@ var officeCoords = {
 }
 
 
-
 function initMap() {
     getMyLocation();
     run();
