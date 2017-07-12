@@ -37,6 +37,11 @@ a:active {
     color: #bed841;
 }
 
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 #container {
     width: 100% auto;
 }
@@ -109,10 +114,17 @@ a:active {
 }
 
 #news {
-    padding-left: 0.4em;
-    border: 0.25em solid #bed841;
-    border-spacing: 0.3em;
-    margin-top: 1.5em;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  border: 0.25em solid #bed841;
+  border-spacing: 0.3em;
+  margin-top: 1.5em;
+  height: 800px;
+  overflow-y: scroll;
+}
+
+#news a {
+  color: #0000ee;
 }
 
 #map {
