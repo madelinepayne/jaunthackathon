@@ -1,20 +1,14 @@
 var mylat = 0;
 var mylng = 0;
-var officeCoords = {
-    sanMateoCoords: { lat: 37.5592181, lng: -122.2890126 },
-    santaMonicaCoords: { lat: 34.017764, lng: -118.5175534 },
-    newYorkCoords: { lat: 40.7454761, lng: -73.9949316 },
-    londonCoords: { lat: 51.5205146, lng: -0.1104772 }
-}
+var sanMateoCoords={lat:37.5592181, lng: -122.2890126 };
+var santaMonicaCoords={lat:34.017764, lng: -118.5175534 };
+var newYorkCoords:{lat:40.7454761, lng: -73.9949316 };
+var londonCoords:{lat:51.5205146, lng: -0.1104772 };
+
 
 
 function initMap() {
     getMyLocation();
-    run();
-}
-
-function run() {
-    findNearestOffice()
 }
 
 function getMyLocation() {
@@ -45,12 +39,4 @@ function renderMap() {
     trafficLayer.setMap(map);
 }
 
-// function findNearestOffice() {
-//     var shortest_distance = 100000000;
-//     for (var i = 0; i < 5; i++) {
-//         var distance = (google.maps.geometry.spherical.computeDistanceBetween(officeCoords[i], myLocation));
-//         if(distance < shortest_distance) {
-//          shortest_distance = distance;
-//         }
-//     }
-// }
+

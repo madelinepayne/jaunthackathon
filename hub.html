@@ -2,62 +2,84 @@
 <html lang="eng">
 
 <head>
-  <title>Jaunt</title>
-  <meta charset="utf-8"/>
-  <meta name="author" content="Albert Yuan">
-  <meta name="keywords" content="Jaunt Hub">
-  <link href="https:/fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
-  <link rel="stylesheet" media="all" type="text/css" href="css/styles.css"/>
-  <script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
-  <script type="text/javascript" src="js/scripts.js"></script>
+    <title>Jaunt</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Albert Yuan">
+    <meta name="keywords" content="Jaunt Hub">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https:/fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <link rel="stylesheet" media="all" type="text/css" href="css/styles.css" />
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
 </head>
 
 <body>
-  <div id="container">
-    <div id="header">
-      <div id="header-left">
-        <a href="index.html" id="title">Jaunt Hub</a>
-      </div>
-      <div id="header-right">
-
-      </div>
-      <!-- weather description -->
-      <!-- shuttle times -->
-    </div>
-
-    <div id="content">
-      <div id="content-left">
-        <div id="quick-links">
-          <h2>Quick Links</h2>
-          <nav>
-            <div id="nav-list">
-              <ul>
-                <li><a href="https://workforcenow.adp.com/public/index.htm">ADP Timecard</a></li>
-                <li><a href="https://www.expensify.com/signin?funnel=homepage_2016July&entryGUID=5963e01e1952a">Expensify</a></li>
-                <li><a href="https://phabricator.jauntvr.net/">Phabricator</a></li>
-                <li><a href="https://jauntvr.atlassian.net/wiki/welcome.action">Atlassian Homepage</a></li>
-                <li><a href="https://github.com/orgs/JauntVR/dashboard">Github</a></li>
-                <li><a href="http://build.corp.jauntvr.com:8080/">Jenkins</a></li>
-                <li><a href="https://kibana.jauntvr.net">Kibana</a></li>
-                <li><a href="https://app.periscopedata.com/app/jauntvr">Periscope</a></li>
-              </ul>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="homepage.html">JAUNT</a>
             </div>
-          </nav>
+            <ul class="nav navbar-nav navbar-right">
+                <!--         <li class="active"><a href="#">Home</a></li> -->
+                <li><a href="hub.html?lat=37.5592181&lng=-122.2890126&name=San-Mateo">San Mateo</a></li>
+                <li><a href="hub.html?lat=34.017764&lng=-118.5175534&name=Santa-Monica">Santa Monica</a></li>
+                <li><a href="hub.html?lat=40.7454761&lng=-73.9949316&name=New-York">New York</a></li>
+                <li><a href="hub.html?lat=51.5205146&lng=-0.1104772&name=London">London</a></li>
+                <li><a href="hub.html">Shanghai</a></li>
+            </ul>
         </div>
-      </div>
-
-      <div id="content-right">
-        <div id="transport-links">
-          <iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=37.559611&lon=-122.286758&name=San Mateo"></iframe>
-          <!-- waze -->
-          <!-- caltrain link + twitter feed news -->
+    </nav>
+    <div id="container">
+        <div id="content">
+            <div id="content-left">
+                <div id="quick-links">
+                    <h2>Quick Links</h2>
+                    <nav>
+                        <div id="nav-list">
+                            <ul>
+                                <li><a href="https://workforcenow.adp.com/public/index.htm">ADP Timecard</a></li>
+                                <li><a href="https://www.expensify.com/signin?funnel=homepage_2016July&entryGUID=5963e01e1952a">Expensify</a></li>
+                                <li><a href="https://phabricator.jauntvr.net/">Phabricator</a></li>
+                                <li><a href="https://jauntvr.atlassian.net/wiki/welcome.action">Atlassian Homepage</a></li>
+                                <li><a href="https://github.com/orgs/JauntVR/dashboard">Github</a></li>
+                                <li><a href="http://build.corp.jauntvr.com:8080/">Jenkins</a></li>
+                                <li><a href="https://kibana.jauntvr.net">Kibana</a></li>
+                                <li><a href="https://app.periscopedata.com/app/jauntvr">Periscope</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div id="content-right">
+                <div id="transport-links">
+                    <h2>Weather</h2>
+                    <script type="text/javascript">
+                    function GetQueryStringParams(sParam) {
+                        var sPageURL = window.location.search.substring(1);
+                        var sURLVariables = sPageURL.split('&');
+                        for (var i = 0; i < sURLVariables.length; i++) {
+                            var sParameterName = sURLVariables[i].split('=');
+                            if (sParameterName[0] == sParam) {
+                                return sParameterName[1];
+                            }
+                        }
+                    }
+                    var lat = GetQueryStringParams("lat");
+                    var lng = GetQueryStringParams("lng");
+                    var name = GetQueryStringParams("name");
+                    if (name.search('-') != -1) {
+                        name = name.replace('-', ' ');
+                    }
+                    $('#transport-links').append('<div id = "weather"> <iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=' + lat + '&lon=' + lng + '&name=' + name + '"></iframe></div>');
+                    </script>
+                    <!-- waze -->
+                    <!-- caltrain link + twitter feed news -->
+                </div>
+                <div id="news">
+                    <h2>Jaunt News</h2>
+                    <!-- jaunt twitter feed -->
+                </div>
+            </div>
         </div>
-
-        <div id="news">
-          <h2>Jaunt News</h2>
-          <!-- jaunt twitter feed -->
-        </div>
-      </div>
     </div>
-  </div>
 </body>
