@@ -29,7 +29,13 @@ function setWeather() {
         cityName = cityName.replace('-', ' ');
     }
     console.log("weather function");
-    $('#weather').append('<iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=' + mylat + '&lon=' + mylng + '&name=' + cityName + '"></iframe>');
+    if (cityName=="London"||cityName=="Shanghai") {
+        $('#weather').append('<iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=' + mylat + '&lon=' + mylng + '&name=' + cityName + '&units=si"></iframe>');
+    }
+    else
+    {
+        $('#weather').append('<iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=' + mylat + '&lon=' + mylng + '&name=' + cityName + '"></iframe>');
+    }
 }
 
 function hideTube() {
