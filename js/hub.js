@@ -7,8 +7,7 @@ var cityName;
 function initPage() {
     setWeather();
     renderMap();
-    hideCaltrain();
-    hideTube();
+    customizeTransport();
 }
 
 function GetQueryStringParams(sParam) {
@@ -38,23 +37,25 @@ function setWeather() {
     }
 }
 
-function hideTube() {
-    if (GetQueryStringParams("name") != "London") {
+function customizeTransport() {
+    var currName = GetQueryStringParams("name");
+    if (currName != "London") {
         $('#tubestatus').hide();
     }
-}
 
-function hideCaltrain() {
-    if (GetQueryStringParams("name") != "San-Mateo") {
+    if (currName != "San-Mateo") {
         $('#caltrain').hide();
     }
-}
 
+    if (currName != "New-York") {
+        $('#mta').hide();
+    }
+
+}
 
 
 function renderMap() {
     myLocation = new google.maps.LatLng(mylat, mylng);
-    console.log(customZoom);
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: parseInt(customZoom),
         center: myLocation
