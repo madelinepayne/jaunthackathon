@@ -40,7 +40,7 @@ function hideTube() {
 function renderMap() {
     myLocation = new google.maps.LatLng(mylat, mylng);
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 11,
+        zoom: 12,
         center: myLocation
     });
     var marker = new google.maps.Marker({
