@@ -118,6 +118,8 @@ img {
     padding-right: 0.4em;
     border-spacing: 0.3em;
     margin-bottom: 1.5em;
+    display: flex;
+    max-height: 240px;
 }
 
 #news {
@@ -164,4 +166,8 @@ img {
 
 #map {
     height: 400px;
+}
+
+#tubestatus {
+  padding-top: 20px;
 }
