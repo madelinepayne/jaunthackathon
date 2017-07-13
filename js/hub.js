@@ -1,13 +1,13 @@
 var mylat = 0;
 var mylng = 0;
+var customZoom = 0;
 var cityName;
 
 
 function initPage() {
     setWeather();
     renderMap();
-    hideCaltrain();
-    hideTube();
+    customizeTransport();
 }
 
 function GetQueryStringParams(sParam) {
@@ -25,32 +25,39 @@ function setWeather() {
     mylat = GetQueryStringParams("lat");
     mylng = GetQueryStringParams("lng");
     cityName = GetQueryStringParams("name");
+    customZoom = GetQueryStringParams("zoom");
+    console.log(customZoom);
     if (cityName.search('-') != -1) {
         cityName = cityName.replace('-', ' ');
     }
-    console.log("weather function");
-    $('#transport-links').append('<div id = "weather"> <iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=' + mylat + '&lon=' + mylng + '&name=' + cityName + '"></iframe></div>');
+    if (cityName == "London" || cityName == "Shanghai") {
+        $('#weather').append('<iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=' + mylat + '&lon=' + mylng + '&name=' + cityName + '&units=si"></iframe>');
+    } else {
+        $('#weather').append('<iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=' + mylat + '&lon=' + mylng + '&name=' + cityName + '"></iframe>');
+    }
 }
 
-function hideTube() {
-    if (GetQueryStringParams("name") != "London") {
+function customizeTransport() {
+    var currName = GetQueryStringParams("name");
+    if (currName != "London") {
         $('#tubestatus').hide();
     }
-}
 
-function hideCaltrain() {
-    console.log(name);
-    if (GetQueryStringParams("name") != "San-Mateo") {
+    if (currName != "San-Mateo") {
         $('#caltrain').hide();
     }
-}
 
+    if (currName != "New-York") {
+        $('#mta').hide();
+    }
+
+}
 
 
 function renderMap() {
     myLocation = new google.maps.LatLng(mylat, mylng);
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 12,
+        zoom: parseInt(customZoom),
         center: myLocation
     });
     var marker = new google.maps.Marker({
@@ -63,5 +70,3 @@ function renderMap() {
     trafficLayer.setMap(map);
 }
 $(document).ready(initPage);
-
-

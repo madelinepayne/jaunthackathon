@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300');
+.navbar {
+    font-family: Lato, sans-serif;
+    font-size: 15;
+    letter-spacing: normal;
+}
+
+body {
+    font-family: Lato, sans-serif;
+    /*font-weight: 300;*/
+    /*font-size: 36px;*/
+    letter-spacing: .025em;
+    background-color: white;
+    color: white;
+    letter-spacing: 10px;
+}
+
+ul.navbar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 2px;
+}
+
+.header {
+    font-family: Lato, sans-serif;
+    font-size: 40px;
+    letter-spacing: 15px;
+    font-weight: 300;
+}
+
+.wrapper {
+    position: absolute;
+    clear: both;
+    margin: auto;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    min-width: 800px;
+}
+
+.container {
+    position: relative;
+    margin-top: 50px;
+    width: 320px;
+    height: 180px;
+    float: left;
+    /*padding: 25px;*/
+    min-width: 200px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 320px;
+    /* grey overlay size */
+    height: 180px;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.5s ease;
+}
+
+.container:hover .overlay {
+    display: flex;
+    background: rgba(0, 0, 0, .3);
+    cursor: pointer;
+}
+
+img {
+    position: absolute;
+    opacity: 0.9;
+    width: 320px;
+    height: 180px;
+    left: 0;
+}
+
+.title {
+    position: absolute;
+    font-family: Lato, sans-serif;
+    width: 320px;
+    top: 0;
+    bottom: 0;
+    height: 50px;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    z-index: 1;
+    transition: top .5s ease;
+    margin: auto;
+}
+
+.container:hover .title {
+    top: 30px;
+}
+
+.location-button {
+    position: absolute;
+    /*width: 320px;*/
+    left: 0;
+    /*top: 100px;*/
+    text-align: center;
+    opacity: 0;
+    transition: opacity .35s ease;
+}
+
+.container:hover .button {
+    opacity: 1;
+}
+
+
+/* media */
+
+@media (min-width: 768px) {
+    .container {
+        width: 320px;
+        left: 0;
+        right: 0;
+        margi
+    }
+}

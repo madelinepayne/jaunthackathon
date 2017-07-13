@@ -20,17 +20,18 @@
                 <a class="navbar-brand" href="index.html">JAUNT</a>
             </div>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="hub.html?lat=37.5592181&lng=-122.2890126&name=San-Mateo">San Mateo</a></li>
-                <li><a href="hub.html?lat=34.017764&lng=-118.5175534&name=Santa-Monica">Santa Monica</a></li>
-                <li><a href="hub.html?lat=40.7454761&lng=-73.9949316&name=New-York">New York</a></li>
-                <li><a href="hub.html?lat=51.5205146&lng=-0.1104772&name=London">London</a></li>
-                <li><a href="hub.html?lat=31.2288671&lng=121.4610247&name=Shanghai">Shanghai</a></li>
+                <li><a href="hub.html?lat=37.5592181&lng=-122.2890126&name=San-Mateo&zoom=11">San Mateo</a></li>
+                <li><a href="hub.html?lat=34.017769&lng=-118.484728&name=Santa-Monica&zoom=14">Santa Monica</a></li>
+                <li><a href="hub.html?lat=40.7454761&lng=-73.9949316&name=New-York&zoom=14">New York</a></li>
+                <li><a href="hub.html?lat=51.5205146&lng=-0.1104772&name=London&zoom=14">London</a></li>
+                <li><a href="hub.html?lat=31.2288671&lng=121.4610247&name=Shanghai&zoom=14">Shanghai</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
         </div>
     </nav>
     <div id="container">
         <div id="sidebar">
+        <h3>Quicklinks</h3>
             <ul>
                 <li><a href="https://jauntvr.atlassian.net/wiki/welcome.action">Jaunt Atlassian</a></li>
                 <li><a href="https://calendar.google.com">Google Calendar</a></li>
@@ -51,15 +52,12 @@
         </div>
         <div id="content">
             <div id="content-top">
-                <div id="transport-links">
-                    <h2>Weather</h2>
-
-                    <!-- waze -->
-                    <!-- caltrain link + twitter feed news -->
+                <div id="weather">
                 </div>
             </div>
             <div id="content-bottom">
                 <div id="content-left">
+                    <h2>Traffic Nearby</h2>
                     <div id="map"></div>
                     <div id="tubestatus" style="width:260px">
                         <script language="JavaScript" src="https://www.tfl.gov.uk/tfl/syndication/widgets/serviceboard/embeddable/serviceboard-iframe-stretchy.js"></script>
@@ -70,12 +68,15 @@
                         <br/>
                         <a href="http://www.caltrain.com/Assets/Assets/Schedules/Weekday+Southbound+Printer-Friendly+Schedule+-+Effective+4-10-17.pdf">Southbound Schedule</a>
                     </div>
+                    <div id="mta">
+                        <script type="text/javascript" src="http://www.mta.info/sites/all/libraries/mta_WidgetScripts/serviceStatusWidget.js"></script>
+                    </div>
                 </div>
                 <div id="content-right">
                     <div id="news">
                         <h2>Jaunt News</h2>
                         <!-- jaunt twitter feed -->
-                        <a class="twitter-timeline" href="https://twitter.com/jauntvr">Tweets by JauntVR</a>
+                        <a class="twitter-timeline" href="https://twitter.com/jauntvr">Tweets by jauntvr</a>
                         <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                 </div>
