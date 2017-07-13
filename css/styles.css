@@ -82,6 +82,7 @@ img {
 
 #content {
     margin: auto;
+    overflow: hidden;
     /*padding-top: 2.5em;*/
 }
 
@@ -91,17 +92,25 @@ img {
     width: 50%;
 }
 
+#content-right {
+    overflow: hidden;
+    margin-left: 24px;
+
+}
+
+#content-top {
+  border-bottom: 1px groove black;
+  margin-bottom: 16px;
+}
+
+#content-bottom {
+  width: 100%;
+}
+
 #quick-links {
     padding-left: 0.4em;
     border: 0.25em solid #bed841;
     border-spacing: 0.3em;
-}
-
-#content-right {
-    overflow: hidden;
-    margin-left: 16px;
-    margin-right: 16px;
-
 }
 
 #transport-links {
@@ -114,7 +123,6 @@ img {
 #news {
   padding-left: 0.4em;
   padding-right: 0.4em;
-  border-right: groove 1px black;
   height: 500px;
   overflow-y: scroll;
 }
@@ -137,11 +145,14 @@ img {
   width: 200px;
   float: left;
   text-align: center;
-  border-right: groove 1px black; 
+}
+
+#sidebar ul {
+  list-style-type: none;
+  padding: 0;
 }
 
 #sidebar ul li {
-  list-style: none;
   padding: 16px 16px 16px 0;
   transition: all ease 0.6s;
 }
