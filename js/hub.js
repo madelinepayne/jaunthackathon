@@ -1,5 +1,6 @@
 var mylat = 0;
 var mylng = 0;
+var customZoom = 0;
 var cityName;
 
 
@@ -25,15 +26,14 @@ function setWeather() {
     mylat = GetQueryStringParams("lat");
     mylng = GetQueryStringParams("lng");
     cityName = GetQueryStringParams("name");
+    customZoom = GetQueryStringParams("zoom");
+    console.log(customZoom);
     if (cityName.search('-') != -1) {
         cityName = cityName.replace('-', ' ');
     }
-    console.log("weather function");
-    if (cityName=="London"||cityName=="Shanghai") {
+    if (cityName == "London" || cityName == "Shanghai") {
         $('#weather').append('<iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=' + mylat + '&lon=' + mylng + '&name=' + cityName + '&units=si"></iframe>');
-    }
-    else
-    {
+    } else {
         $('#weather').append('<iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=' + mylat + '&lon=' + mylng + '&name=' + cityName + '"></iframe>');
     }
 }
@@ -45,7 +45,6 @@ function hideTube() {
 }
 
 function hideCaltrain() {
-    console.log(name);
     if (GetQueryStringParams("name") != "San-Mateo") {
         $('#caltrain').hide();
     }
@@ -55,8 +54,9 @@ function hideCaltrain() {
 
 function renderMap() {
     myLocation = new google.maps.LatLng(mylat, mylng);
+    console.log(customZoom);
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 12,
+        zoom: parseInt(customZoom),
         center: myLocation
     });
     var marker = new google.maps.Marker({
@@ -69,5 +69,3 @@ function renderMap() {
     trafficLayer.setMap(map);
 }
 $(document).ready(initPage);
-
-

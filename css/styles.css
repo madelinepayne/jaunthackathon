@@ -89,7 +89,8 @@ img {
 #content-left {
     float: left;
     margin-left: 12px;
-    width: 50%;
+    margin-right: 50px;
+    width: 45%;
 }
 
 #content-right {
