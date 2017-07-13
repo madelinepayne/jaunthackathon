@@ -6,6 +6,8 @@ var cityName;
 function initPage() {
     setWeather();
     renderMap();
+    hideCaltrain();
+    hideTube();
 }
 
 function GetQueryStringParams(sParam) {
@@ -36,6 +38,14 @@ function hideTube() {
     }
 }
 
+function hideCaltrain() {
+    console.log(name);
+    if (GetQueryStringParams("name") != "San-Mateo") {
+        $('#caltrain').hide();
+    }
+}
+
+
 
 function renderMap() {
     myLocation = new google.maps.LatLng(mylat, mylng);
@@ -52,5 +62,6 @@ function renderMap() {
     var trafficLayer = new google.maps.TrafficLayer();
     trafficLayer.setMap(map);
 }
-$('window').load(hideTube());
+$(document).ready(initPage);
+
 
