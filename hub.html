@@ -10,7 +10,7 @@
     <link href="https:/fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
     <link rel="stylesheet" media="all" type="text/css" href="css/styles.css" />
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-   <!--  <script type="text/javascript" src="js/scripts.js"></script> -->
+    <!--  <script type="text/javascript" src="js/scripts.js"></script> -->
 </head>
 
 <body onload="initPage()">
@@ -29,20 +29,26 @@
         </div>
     </nav>
     <div id="container">
-        <div id = "sidebar">
+        <div id="sidebar">
             <ul>
-                <li><a href="https://workforcenow.adp.com/public/index.htm">ADP Timecard</a></li>
-                <li><a href="https://www.expensify.com/signin?funnel=homepage_2016July&entryGUID=5963e01e1952a">Expensify</a></li>
+                <li><a href="https://jauntvr.atlassian.net/wiki/welcome.action">Jaunt Atlassian</a></li>
+                <li><a href="calendar.google.com">Google Calendar</a></li>
+                <li><a href="https://cloud.jauntvr.com/accounts/login/?next=/main/">Jaunt Cloud</a></li>
+                <li><a href="https://account.box.com/login">Box</a></li>
+                <li><a href="drive.google.com">Google Drive</a></li>
+                <li><a href="https://zoom.us/signin">Zoom</a></li>
                 <li><a href="https://phabricator.jauntvr.net/">Phabricator</a></li>
-                <li><a href="https://jauntvr.atlassian.net/wiki/welcome.action">Atlassian Homepage</a></li>
                 <li><a href="https://github.com/orgs/JauntVR/dashboard">Github</a></li>
                 <li><a href="http://build.corp.jauntvr.com:8080/">Jenkins</a></li>
                 <li><a href="https://kibana.jauntvr.net">Kibana</a></li>
                 <li><a href="https://app.periscopedata.com/app/jauntvr">Periscope</a></li>
+                <li><a href="https://workforcenow.adp.com/public/index.htm">Workforce ADP</a></li>
+                <li><a href="https://app.bill.com/Login">Bill.com</a></li>
+                <li><a href="https://www.expensify.com/signin?funnel=homepage_2016July&entryGUID=5963e01e1952a">Expensify</a></li>
             </ul>
         </div>
         <div id="content">
-            <div id = "content-top">
+            <div id="content-top">
                 <div id="transport-links">
                     <h2>Weather</h2>
 
@@ -50,31 +56,27 @@
                     <!-- caltrain link + twitter feed news -->
                 </div>
             </div>
-            
-            <div id = "content-bottom">
-                <div id = "content-left">
-                    
+            <div id="content-bottom">
+                <div id="content-left">
                     <div id="map"></div>
                     <div id="tubestatus" style="width:260px">
                         <script language="JavaScript" src="https://www.tfl.gov.uk/tfl/syndication/widgets/serviceboard/embeddable/serviceboard-iframe-stretchy.js"></script>
                     </div>
                 </div>
                 <div id="content-right">
-                    
                     <div id="news">
                         <h2>Jaunt News</h2>
                         <!-- jaunt twitter feed -->
-                        <a class="twitter-timeline" href="https://twitter.com/jauntvr">Tweets by jauntvr</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        <a class="twitter-timeline" href="https://twitter.com/jauntvr">Tweets by jauntvr</a>
+                        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
-                    
                 </div>
                 <div id="food"></div>
             </div>
-            
         </div>
     </div>
 </body>
 <script type="text/javascript" src="js/hub.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3dlcGcuOHQlw1Ryqk0iQfpdd-3tHOXbM&callback=initPage&" type="text/javascript"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3dlcGcuOHQlw1Ryqk0iQfpdd-3tHOXbM" type="text/javascript"></script>
 
 </html>

@@ -26,6 +26,7 @@ function setWeather() {
     if (cityName.search('-') != -1) {
         cityName = cityName.replace('-', ' ');
     }
+    console.log("weather function");
     $('#transport-links').append('<div id = "weather"> <iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=' + mylat + '&lon=' + mylng + '&name=' + cityName + '"></iframe></div>');
 }
 
@@ -52,3 +53,4 @@ function renderMap() {
     trafficLayer.setMap(map);
 }
 $('window').load(hideTube());
+
