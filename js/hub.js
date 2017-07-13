@@ -26,7 +26,6 @@ function setWeather() {
     mylng = GetQueryStringParams("lng");
     cityName = GetQueryStringParams("name");
     customZoom = GetQueryStringParams("zoom");
-    console.log(customZoom);
     if (cityName.search('-') != -1) {
         cityName = cityName.replace('-', ' ');
     }
@@ -55,7 +54,11 @@ function customizeTransport() {
 
 
 function renderMap() {
+    if (typeof google == "undefined") {
+        return setTimeout(renderMap, 1000);
+    }
     myLocation = new google.maps.LatLng(mylat, mylng);
+
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: parseInt(customZoom),
         center: myLocation
